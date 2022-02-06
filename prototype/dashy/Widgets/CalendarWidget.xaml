@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:widgets="clr-namespace:dashy.Widgets"
+    xmlns:converters="clr-namespace:dashy.Converters"
+    x:Class="dashy.Widgets.CalendarWidget">
+
+    <Grid.Resources>
+        <converters:BooleanToColorConverter x:Key="TodayBackgroundColorConverter" True="DarkOrange" False="Transparent" />
+        <converters:BooleanToColorConverter x:Key="TodayTextColorConverter" True="Black" False="DarkOrange" />
+    </Grid.Resources>
+
+    <CollectionView
+        ItemsSource="{Binding CalendarItems}">
+
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout
+                Orientation="Vertical"
+                Span="7"/>
+        </CollectionView.ItemsLayout>
+
+        <CollectionView.ItemTemplate>
+
+            <DataTemplate>
+
+                <Frame
+                    Padding="0"
+                    BorderColor="Transparent"
+                    CornerRadius="0"
+                    HasShadow="False"
+                    BackgroundColor="{Binding IsToday, Converter={StaticResource TodayBackgroundColorConverter}}"
+                    HeightRequest="{Binding Source={RelativeSource AncestorType={x:Type widgets:CalendarWidget}}, Path=ItemHeight}">
+
+                    <Label
+                        Text="{Binding Name}"
+                        FontAttributes="Bold"
+                        TextColor="{Binding IsToday, Converter={StaticResource TodayTextColorConverter}}"
+                        HorizontalTextAlignment="Start"/>
+
+                </Frame>
+
+            </DataTemplate>
+
+        </CollectionView.ItemTemplate>
+
+    </CollectionView>
+
+    <widgets:DraggableOverlayView />
+
+</Grid>

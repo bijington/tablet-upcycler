@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:widgets="clr-namespace:dashy.Widgets"
+    x:Class="dashy.Widgets.DateWidget">
+
+    <StackLayout>
+
+        <Label
+            Text="{Binding DateTime, StringFormat='{0:dddd}'}"
+            TextColor="DarkOrange"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            FontSize="40"/>
+
+        <Label
+            Text="{Binding DateTime, StringFormat='{0:d MMMM}'}"
+            TextColor="DarkOrange"
+            HorizontalTextAlignment="Center"
+            VerticalTextAlignment="Center"
+            FontSize="30"/>
+
+    </StackLayout>
+
+    <widgets:DraggableOverlayView />
+
+</Grid>

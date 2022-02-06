@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Grid
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:widgets="clr-namespace:dashy.Widgets"
+    x:Class="dashy.Widgets.ImageWidget">
+
+    <Image Source="https://www.nasa.gov/sites/default/files/thumbnails/image/archives_raquarii.jpg" />
+
+    <widgets:DraggableOverlayView />
+
+</Grid>

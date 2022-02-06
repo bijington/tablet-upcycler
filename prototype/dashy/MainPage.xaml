@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:widgets="clr-namespace:dashy.Widgets"
+             x:Class="dashy.MainPage"
+             BackgroundColor="Black">
+
+    <AbsoluteLayout BackgroundColor="Black">
+
+        <widgets:CalendarWidget
+            WidthRequest="500"
+            HeightRequest="400" />
+
+        <widgets:ClockWidget
+            WidthRequest="200"
+            HeightRequest="100" />
+
+        <widgets:DateWidget
+            WidthRequest="200"
+            HeightRequest="100" />
+
+        <!--<widgets:QuoteOfTheDayWidget
+            WidthRequest="500"
+            HeightRequest="50" />-->
+
+        <!--<widgets:ImageWidget
+            WidthRequest="500"
+            HeightRequest="500" />-->
+
+    </AbsoluteLayout>
+
+</ContentPage>
