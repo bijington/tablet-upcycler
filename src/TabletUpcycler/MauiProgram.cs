@@ -1,4 +1,6 @@
-﻿namespace TabletUpcycler;
+﻿using TabletUpcycler.ViewModels.Widgets;
+
+namespace TabletUpcycler;
 
 public static class MauiProgram
 {
@@ -11,6 +13,8 @@ public static class MauiProgram
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 			});
+
+		builder.Services.AddTransient<ClockWidgetViewModel>();
 
 		return builder.Build();
 	}

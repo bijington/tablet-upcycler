@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:widgets="clr-namespace:TabletUpcycler.ViewModels.Widgets"
+             x:Class="TabletUpcycler.Views.Widgets.ClockWidget"
+             x:DataType="widgets:ClockWidgetViewModel">
+
+    <Label
+        Text="{Binding Time, StringFormat='{0:HH:mm}'}"
+        HorizontalTextAlignment="Center"
+        VerticalTextAlignment="Center"
+        FontSize="80"/>
+
+</ContentView>
